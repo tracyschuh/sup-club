@@ -1,0 +1,263 @@
+/* Primary Document Rules */
+* {
+	box-sizing: border-box;
+}
+body { 
+	background-color: #FBFBFB;
+	color: black;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size: medium; 
+	margin: 0px;
+	padding: 0px;
+}
+h1 {
+	font-size: 150%;
+	font-weight: bold;
+}
+h2 {
+	font-size: 130%;
+	font-weight: bold;
+}
+h3 {
+	font-size: 110%;
+	font-weight: bold;
+}
+#allbodycontent {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Header Area */	
+#header {
+	height: 100px;
+	background-color: #FBFBFB;
+	color:#79B4B7;
+    -webkit-text-stroke: 1px darkslategray;
+	font-size: 160%;
+	padding-left: 15px;
+	padding-top: 1px;	
+	text-align: center;
+}
+/* Navigation Area*/
+nav {
+	height: 50px;
+	background-color: whitesmoke;
+	color: black;
+}
+nav ul {
+	display: block;
+	float: left;
+	list-style-type: none;
+	padding-top: 5px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+nav ul li {
+	float: left;
+	display: block;
+	position: relative;
+	margin: 0px 20px 0px 0px;
+}
+nav ul li a {
+	display: inline-block;
+	color: black;
+	font-size: 110%;
+	text-decoration: none;
+	padding: 10px;
+}
+nav ul li:hover {
+	background-color: #79B4B7; /*keeps parent highlighted as cursor moves down dropdown options*/
+}
+nav ul a:hover {
+	background-color: #79B4B7;
+	color: white;
+}
+nav ul li ul {
+	display: none;
+	position: absolute;
+	float: left;
+	background-color: #79B4B7;
+	padding: 10px;
+	width: 200px;
+	text-align: left;
+}
+nav ul li:hover ul {
+	display: block;
+}
+/* Sidebars */
+.right_sidebar_resources { /*image on safety, paddle spot pages*/
+	float: right;
+	width: 30%;
+	padding-top: 0px;
+    padding-left: 15px;
+}
+.right_sidebar_resources img {
+	width: 100%;
+	height: auto;
+}
+#right_sidebar_profile { /*profile udpate, index, account profile pages dynamic content*/
+	width: 25%;
+	float: right;
+	padding-left: 10px;
+	padding-right: 20px;
+	margin-left: 10px;
+	border-left: 1px solid #9D9D9D;
+	word-break: break-word;
+}
+/* Main Body Area */
+#mainbody { /*for most pages, background image with paddlers*/
+	text-align: left;
+	padding: 10px 20px 10px 20px;
+	margin-bottom: 0px;
+	background: url(../images/paddlers.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	height: auto;
+	min-height: 1000px;
+
+}
+#mainbody_nopaddlers { /*for safety, paddle spot pages, background image with paddlers cropped out for readability*/ 
+	text-align: left;
+	padding: 10px 20px 10px 20px;
+	margin-bottom: 0px;
+	background: url(../images/no_paddlers.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+}
+/*other mainbody styles*/
+.center { /*text center*/
+	text-align: center;
+}
+.left_justify {
+	text-align: left;
+}
+.clear_float {
+	clear: left;
+}
+.bold {
+	font-weight: bold;
+}
+dt { /*description list on paddle spots page*/
+	font-weight: bold;
+	padding-bottom: 5px;
+	padding-top: 10px;
+	font-style: italic;
+}
+/*js validation and other output messages*/
+.small {
+	font-size: small;
+}
+.large_blue {
+	font-size: large;
+	color: #009DAE;
+}
+.error, #error_msg {
+	color: red;
+}
+/*coolest button ever*/
+.orange_button {
+	background-color: initial;
+  	background-image: linear-gradient(-180deg, #F9975D, #C85C5C);
+  	border-radius: 6px;
+  	box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  	color: #FFFFFF;
+  	cursor: pointer;
+  	display: inline-block;
+  	font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+	height: 35px;
+  	line-height: 35px;
+  	outline: 0;
+  	overflow: hidden;
+  	padding: 0 20px;
+  	pointer-events: auto;
+  	position: relative;
+  	text-align: center;
+  	touch-action: manipulation;
+  	user-select: none;
+  	-webkit-user-select: none;
+  	vertical-align: top;
+  	white-space: nowrap;
+    border: 0;
+  	transition: box-shadow .2s;
+}
+.orange_button:hover {
+	box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+.orange_button a {
+	text-decoration: none;
+	color: white;
+}
+/* Footer Area */
+#footer {
+	background-color: #E8E1D9;
+	text-align: center;
+	padding-top: 12px;
+	margin-bottom: 5px;
+	height: 40px;
+	clear: both;
+}
+/*responsive layout*/
+@media (max-width: 1000px) {
+	#right_sidebar_profile { /*profile udpate, index, account profile pages dynamic content*/
+		width: 30%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+@media (max-width: 800px) {
+	body {
+		font-size: small;
+	}
+	#mainbody {
+		background: url(../images/no_paddlers.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: center;
+		min-height: 0;
+		padding-bottom: 50px;
+	}
+	#header {
+		font-size: 140%;
+		height: 80px;
+	}
+	h1 {
+		font-size: 130%;
+	}
+	nav ul {
+		padding-left: 5px;
+	}
+	nav ul li {
+		margin-right: 5px;
+	}
+	nav ul li ul {
+		width: 160px;
+	}
+	#right_sidebar_profile { /*profile udpate, index, account profile pages dynamic content*/
+		display: none;
+	}
+	.orange_button {
+		height: 25px;
+		line-height: 25px;
+		padding: 0 10px;
+		font-size: small;
+	}
+}
+@media (max-width: 600px) {
+	#header {
+		padding: 0;
+	}
+	#header h1 {
+		font-size: 130%;
+		padding: 20px 5px 5px 5px;
+		margin: 10px 0;
+	}
+	nav ul li a {
+		padding: 10px 5px;
+	}
+	nav ul li ul {
+		width: 150px;
+	}
+}

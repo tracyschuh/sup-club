@@ -1,0 +1,118 @@
+/*quadrat layout on login page*/
+.left_quad {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.right_quad {
+	width: 50%;
+	float: right;
+	text-align: center;
+}
+.full_quad {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+.full_quad li {
+	margin-bottom: 15px;
+}
+/*label/input form on login and signup pages*/
+.label_signup, .label_login {
+	width: 140px;
+	display: inline-block;
+	text-align: right;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.input_signup, .input_login {
+	width: 200px;
+	border: 2px solid gray;
+	border-radius: 4px;
+	padding: 4px;
+	background-color: whitesmoke;
+}
+.input_login {
+	margin-bottom: 10px;
+}
+/*zip code dropdown on signup form*/
+.ui-menu {
+	list-style-type: none;
+	z-index: 99;
+}
+.ui-menu-item {
+	width: 120px;
+	height: 25px;
+	
+	background-color: #E8E1D9;
+	text-align: center;
+	vertical-align: middle;
+}
+.ui-menu-item:hover {
+	background-color: #79B4B7;
+}
+/*responsive layout*/
+@media (max-width: 1000px) {
+	.full_quad {
+		width: 90%;
+	}
+}
+@media (max-width: 900px) {
+	#unameprompt, #pwd1prompt, #pwd2prompt, #emailprompt, #zipprompt {
+		display: block;
+		margin-left: 145px;
+		padding-bottom: 0;
+		padding-top: 2px;
+	}
+}	
+@media (max-width: 800px) {
+	.right_quad, .left_quad {
+		width: 48%;
+	}
+	.full_quad {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+	}
+	.label_login {
+		width: 100%;
+		display: block;
+		text-align: center;
+		font-size: 105%;
+		margin-top: 5px;
+		margin-bottom: 2px;
+	}
+	.input_login {
+		width: 80%;
+		margin-bottom: 5px;
+	}
+	.label_signup {
+		width: 100%;
+		display: block;
+		text-align: left;
+		font-size: 110%;
+		margin-top: 0;
+		margin-bottom: 2px;
+	}
+	.input_signup {
+		width: 30%;
+		min-width: 200px;
+	}
+	#unameprompt, #pwd1prompt, #pwd2prompt, #emailprompt, #zipprompt {
+		margin: 0;
+		padding-bottom: 0;
+	}
+}
+@media (max-width: 600px) {
+	.right_quad, .left_quad, .full_quad {
+		width: 100%;
+		float: none;
+	}
+	.full_quad li {
+		margin-bottom: 10px;
+	}
+	.input_login {
+		width: 60%;
+	}
+}

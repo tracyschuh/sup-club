@@ -1,0 +1,145 @@
+/*member image*/
+#left_sidebar_index { 
+	width: 10%;
+	min-width: 140px;
+	height: auto;
+	min-height: 140px;
+	float: left;
+	padding: 20px;
+}
+#left_sidebar_index img {
+	border: 1px solid white;
+	border-radius: 3px;
+	width: 100px;
+	height: 100px;
+}
+/*other mainbody styles*/
+.blue {
+	color: #009DAE;
+}
+.small_margin {
+	margin-left: 15px;
+}
+/*index page quads*/
+.container {
+	width: 70%;
+	text-align: center;
+	margin-left: 15px;
+	margin-bottom: 30px;
+}
+.left_quad, .middle_quad, .right_quad {
+	width: 33%;
+	float: left;
+	text-align: left;
+	padding-bottom: 10px;
+}
+/*index page div chat box*/
+#input {
+	width: 70%;
+	min-width: 170px;
+	border: 2px solid gray;
+	border-radius: 4px;
+	padding: 8px;
+	background-color: whitesmoke;
+}
+#box {
+	background-color: whitesmoke;
+	width: 70%;
+	min-width: 170px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 4px;
+	border: 2px solid gray;
+	display: none;
+}
+/*friends table on index page*/
+#showFriends {
+	clear: both;
+}
+.friends_table {
+	position: relative;
+	display: flex;
+	width: fit-content;
+	border: 2px solid gray;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+	border-radius: 4px;
+	border-spacing: 15px;
+	border-collapse: collapse;
+	text-align: left;
+	word-break: break-word;
+}
+.friends_table th,td {
+	border: 1px solid white;
+	padding: 10px;
+}
+.friends_table img {
+	width: 60px;
+	height: 60px;
+}
+.blue_row {
+	background-color: #79B4B7;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+.green_row {
+	background-color: #B4C6A6;
+}
+#hide_friends {
+	cursor: pointer;
+	position: absolute;
+	top: 0%;
+	right: 0%;
+}
+#hide_chat {
+	cursor: pointer;
+	font-weight: bold;
+}
+/*responsive layout*/
+@media (max-width: 1000px){
+	#left_sidebar_index { /*profile, contact pages member image*/
+		min-width: 120px;
+		min-height: 120px;
+	}
+	#left_sidebar_index img {
+		width: 70px;
+		height: 70px;
+	}
+	.left_quad, .middle_quad, .right_quad {
+		width: 50%;
+	}
+	.friends_table {
+		font-size: small;
+	}
+}
+@media (max-width: 900px) {
+	.friends_table {
+		border-spacing: 5px;
+	}
+	.friends_table th,td {
+		padding: 5px;
+	}
+	.friends_table img {
+		width: 40px;
+		height: 40px;
+	}
+}
+@media (max-width: 800px) {
+	#left_sidebar_index { /*profile, contact pages member image*/
+		min-width: 100px;
+		min-height: 100px;
+		padding: 10px;
+	}
+	.left_quad, .middle_quad, .right_quad {
+		float: none;
+		width: 100%;
+	}
+	.hide1 {
+		display: none;
+	}
+}
+@media (max-width: 600px) {
+	.hide2 {
+		display: none;
+	}
+}
