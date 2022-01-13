@@ -71,10 +71,10 @@
 <!DOCTYPE HTML>  
 <html lang= "en">
     <head>
-		<title>SUP Club</title>
-		<meta charset="UTF-8">
+	<title>SUP Club</title>
+	<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="https://tracyschuh.com/SUP/CSS/sup.css">
+	<link rel="stylesheet" type="text/css" href="https://tracyschuh.com/SUP/CSS/sup.css">
         <link rel="stylesheet" type="text/css" href="https://tracyschuh.com/SUP/CSS/login_signup.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
