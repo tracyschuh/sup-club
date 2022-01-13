@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#friends").click(function() {
-        $("#showFriends").load("friends.php", function(responseTxt, statusTxt, xhr) { //file must be in same folder to work with load() otherwise it's blocked for security reasons
+        $("#showFriends").load("friends.php", function(responseTxt, statusTxt, xhr) { //call script to query database
             /*debug
             if (statusTxt == "success")
                 alert("External content loaded successfully");
@@ -11,7 +11,7 @@ $(document).ready(function(){
     });
 });
 
-function hideFriends() {
+function hideFriends() { //hide friends table
     $("#showFriends").html("");
 }
 
