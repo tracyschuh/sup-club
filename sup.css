@@ -1,4 +1,7 @@
 /* Primary Document Rules */
+html {
+    -webkit-text-size-adjust: 100%;
+}
 * {
 	box-sizing: border-box;
 }
@@ -32,7 +35,7 @@ h3 {
 	height: 100px;
 	background-color: #FBFBFB;
 	color:#79B4B7;
-    	-webkit-text-stroke: 1px darkslategray;
+    -webkit-text-stroke: 1px darkslategray;
 	font-size: 160%;
 	padding-left: 15px;
 	padding-top: 1px;	
@@ -85,12 +88,64 @@ nav ul li ul {
 nav ul li:hover ul {
 	display: block;
 }
+#hamburger-icon {
+	margin: auto 0;
+	display: none;
+	cursor: pointer;
+}
+#hamburger-icon div {
+	width: 25px;
+	height: 3px;
+	background-color: black;
+	margin: 6px;
+	transition: 0.4s;
+}
+.open .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-6px, 6px);
+	transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+	opacity: 0;
+}
+.open .bar3 {
+	-webkit-transform: rotate(45deg) translate(-6px, -8px);
+	transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.mobile-menu {
+	display: none;
+	position: absolute;
+	top: 110px;
+	left: 0;
+	height: auto;
+	width: 50%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #79B4B7;
+	z-index: 99;
+}
+.mobile-menu li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 2px;
+	list-style-type: none;
+}
+.mobile-menu a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
 /* Sidebars */
 .right_sidebar_resources { /*image on safety, paddle spot pages*/
 	float: right;
 	width: 30%;
 	padding-top: 0px;
-    	padding-left: 15px;
+    padding-left: 15px;
 }
 .right_sidebar_resources img {
 	width: 100%;
@@ -150,6 +205,9 @@ dt { /*description list on paddle spots page*/
 .small {
 	font-size: small;
 }
+.welcome_blue {
+	color: #009DAE;
+}
 .large_blue {
 	font-size: large;
 	color: #009DAE;
@@ -180,8 +238,9 @@ dt { /*description list on paddle spots page*/
   	-webkit-user-select: none;
   	vertical-align: top;
   	white-space: nowrap;
-    	border: 0;
+    border: 0;
   	transition: box-shadow .2s;
+	z-index: 2;
 }
 .orange_button:hover {
 	box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
@@ -211,6 +270,12 @@ dt { /*description list on paddle spots page*/
 	body {
 		font-size: small;
 	}
+	nav {
+		height: 40px;
+	}
+	nav ul {
+		padding-top: 2px;
+	}
 	#mainbody {
 		background: url(../images/no_paddlers.jpg);
 		background-repeat: no-repeat;
@@ -223,9 +288,6 @@ dt { /*description list on paddle spots page*/
 		font-size: 140%;
 		height: 80px;
 	}
-	h1 {
-		font-size: 130%;
-	}
 	nav ul {
 		padding-left: 5px;
 	}
@@ -237,6 +299,10 @@ dt { /*description list on paddle spots page*/
 	}
 	#right_sidebar_profile { /*profile udpate, index, account profile pages dynamic content*/
 		display: none;
+	}
+	.large_blue {
+		font-size: small;
+		clear: left;
 	}
 	.orange_button {
 		height: 25px;
@@ -254,10 +320,29 @@ dt { /*description list on paddle spots page*/
 		padding: 20px 5px 5px 5px;
 		margin: 10px 0;
 	}
-	nav ul li a {
-		padding: 10px 5px;
+	header nav {
+		display: none;
 	}
-	nav ul li ul {
-		width: 150px;
+	#hamburger-icon {
+		display: block;
+	}
+	.dropdown-mobile {
+		display: none;
+	}
+	.dropdown-mobile li {
+		padding-bottom: 5px;
+		margin-bottom: 0;
+	}
+	header ul {
+		padding-left: 10px;
+	}
+	header ul li:hover .dropdown-mobile {
+		display: flex;
+		flex-direction: column;
+		padding-left: 15px;
+	}
+	dd {
+		margin-left: 10px;
+		padding-left: 0;
 	}
 }
