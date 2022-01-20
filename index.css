@@ -1,5 +1,4 @@
-/*member image*/
-#left_sidebar_index { 
+#left_sidebar_index { /*member image*/
 	width: 10%;
 	min-width: 140px;
 	height: auto;
@@ -13,9 +12,11 @@
 	width: 100px;
 	height: 100px;
 }
-/*other mainbody styles*/
 .blue {
 	color: #009DAE;
+}
+#connect {
+	clear: left;
 }
 .small_margin {
 	margin-left: 15px;
@@ -52,13 +53,14 @@
 	border: 2px solid gray;
 	display: none;
 }
+/* Form selectors and rules */
 /*friends table on index page*/
 #showFriends {
 	clear: both;
 }
 .friends_table {
 	position: relative;
-	display: flex;
+	display:flex;
 	width: fit-content;
 	border: 2px solid gray;
 	box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
@@ -139,6 +141,18 @@
 	}
 }
 @media (max-width: 600px) {
+	#left_sidebar_index { /*profile, contact pages member image*/
+		min-width: 80px;
+		min-height: 80px;
+		padding: 5px 5px 5px 0;
+	}
+	#left_sidebar_index img {
+		width: 60px;
+		height: 60px;
+	}
+	.small_margin {
+		margin-left: 3px;
+	}
 	.hide2 {
 		display: none;
 	}
