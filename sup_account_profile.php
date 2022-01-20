@@ -138,12 +138,13 @@
 <!DOCTYPE html>
 <html lang= "en">
     <head>
-	<title>SUP Account Profile</title>
-	<meta charset="UTF-8">
+		<title>SUP Account Profile</title>
+		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="https://tracyschuh.com/SUP/CSS/sup.css">
+		<link rel="stylesheet" type="text/css" href="https://tracyschuh.com/SUP/CSS/sup.css">
         <link rel="stylesheet" type="text/css" href="https://tracyschuh.com/SUP/CSS/profile_contact.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://tracyschuh.com/SUP/js/navbar.js"></script>
     </head>
     <body id = "allbodycontent">
         
@@ -171,12 +172,13 @@
                     <button id='edit_board_button' class='orange_button' onclick="location.href='https://tracyschuh.com/SUP/sup_board_profile.php';">Edit Board Profile</button>
             </div>
             <h2>Account Profile</h2>
-                <h4><?= $email_message ?></h4>
-                <h4><?= $zip_message ?></h4>
-                <h4><?= $image_message ?></h4>
+                <p><?= $email_message ?></p>
+                <p><?= $zip_message ?></p>
+                <p><?= $image_message ?></p>
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" id= "userInfo" name= "userInfo" enctype= "multipart/form-data">
                     <label class="label_profile_acct">Username&nbsp;</label>
                     <input class="input_profile" name= "userName" id= "userName" type= "text" size= "20" readonly = "readonly" value= "<?php if (!empty($uname)) echo $uname; ?>">
+                    <span class="output_div error small"><a href="https://tracyschuh.com/SUP/sup_contact.php">Contact us to change user name</a></span>
                     <br>
                     <label class="label_profile_acct">Email&nbsp;</label>
                     <input class="input_profile" type="text" name="emailAddress" id="emailAddress" value= "<?php if (!empty($email)) echo $email; ?>">&nbsp;
