@@ -18,13 +18,13 @@
     echo "<br><br>
             <table class='friends_table'>
                 <tr class='blue_row'>
-                <th>Profile Pic</th>
+                <th><button id='hide_friends' type='button' name='hide_friends' onclick='hideFriends();'>x</button>Profile Pic</th>
                 <th>User Name</th>
                 <th>Email</th>
                 <th class='hide1'>Zip Code</th>
                 <th class='hide2'>Board / Hull Type</th>
                 <th class='hide1'>Board Stats</th>
-                <th>Other Info<button id='hide_friends' type='button' name='hide_friends' onclick='hideFriends();'>x</button></th>
+                <th class='hide2'>Other Info</th>
                 </tr>";
 
     while ($row = mysqli_fetch_assoc($result)) {
@@ -43,7 +43,7 @@
                 <td class='hide1'>$userZip</td>
                 <td class='hide2'>$boardStyle</td>
                 <td class='hide1'>$boardDimensions</td>
-                <td>$otherInfo</td>
+                <td class='hide2'>$otherInfo</td>
             </tr>";
     }
     echo "</table>";
