@@ -34,6 +34,7 @@
 	<link rel="stylesheet" type="text/css" href="https://tracyschuh.com/SUP/CSS/index.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://tracyschuh.com/SUP/js/friends.js"></script>
+	<script src="https://tracyschuh.com/SUP/js/navbar.js"></script>
     </head>
     <body id = "allbodycontent">
         
@@ -62,9 +63,9 @@
                     <button id="edit_board_button" class="orange_button" type="button" onclick="location.href='https://tracyschuh.com/SUP/sup_board_profile.php';">Edit Board Profile</button><br><br>
             </div>
             <h1>You Love SUP Too!</h1>
-                <h2 class="large_blue">Welcome <?= $uname ?>!</h2>
-                <br><br>
-            <h1 class="small_margin">Connect with Other Members</h1>
+                <h2 class="welcome_blue">Welcome <?= $uname ?>!</h2>
+                <br>
+            <h1 id="connect" class="small_margin">Connect with Other Members</h1>
                 <div class="container">
                     <div class="left_quad">
                         <h3>Find Friends</h3>
